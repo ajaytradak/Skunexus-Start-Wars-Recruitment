@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
 import './index.css';
 import Routers from './routers';
 import reportWebVitals from './reportWebVitals';
+import Store from "./constants/Store";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routers />
+      <Provider store={Store}>
+        <Routers />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
